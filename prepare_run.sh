@@ -18,6 +18,7 @@ return
 fi
 
 cmsenv
+g++ -o split `root-config --cflags` splitRootFile.cc `root-config --glibs`
 ./split ${NAME}.root ${NUMBER}
 
 directory="./$NAME/input/"
