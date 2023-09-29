@@ -1,1 +1,1 @@
-# HCAL
+# MPGD-HCAL signal fit
