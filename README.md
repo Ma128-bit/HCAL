@@ -28,3 +28,15 @@ This crate a directory named [file_name] with the following items:
 * `launch_analysis.sh` a file that launch on condor the analysis of one subfile
   * Example: `source launch_analysis.sh 5` submit the analysis of the subfile number 5
 * `submit.condor` used to submit the analysis of all the subfiles
+
+<p>&nbsp;</p>
+
+## After completing the analysis
+In the `[file_name]/output` directory you will find the modified subfiles and in `[file_name]/log` the logs associated with the submission to condor.
+To add all the output subfiles:
+```
+source hadd_run.sh.sh [file_name]
+```
+This will produce the final file in the [file_name] directory.
+
+<p>&nbsp;</p>
