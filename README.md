@@ -7,7 +7,8 @@ This repository contains the files necessary to perform the fit on the signals o
 cmsrel CMSSW_13_2_4
 cd CMSSW_13_2_4/src
 cmsenv
-git clone https://github.com/BariGEMJetTau/Tau23Mu.git .
-
+git clone https://github.com/Ma128-bit/HCAL.git .
+mkdir dictionaries
+mkdir Root_File
 ```
 <p>&nbsp;</p>
