@@ -10,10 +10,8 @@ cmsenv
 git clone https://github.com/Ma128-bit/HCAL.git .
 source setup.sh
 ```
+In the `Root_File` directory you need to copy the files you want to analyze.
 <p>&nbsp;</p>
-
-In the `Root_File` directory you need to copy the files you want to analyze
-
 ## Run the analysis 
 To analyze a file:
 ```
