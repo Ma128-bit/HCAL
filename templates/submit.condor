@@ -1,0 +1,5 @@
+executable = launch_analysis.sh
+arguments = $(Process)
+output  = log/Job_$(Cluster)_$(Process).out
+error   = log/Job_$(Cluster)_$(Process).err
+log     = log/Job_$(Cluster)_$(Process).log
