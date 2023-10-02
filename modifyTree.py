@@ -465,7 +465,7 @@ df = df.Redefine("raw_q","new_raw_q(evt, raw_q, mmChamber, mmStrip, t_max_q)")
 df = df.Redefine("max_q", "new_max_q(max_q, raw_q, mmChamber, mmStrip, t_max_q)")
 df = df.Redefine("t_max_q", "new_t_max_q(max_q, raw_q, mmChamber, mmStrip, t_max_q)")
 
-new_tree = df.Snapshot("apv_raw", name2+"_new2.root") # Creare un nuovo file ROOT con un nuovo TTree
+new_tree = df.Snapshot("apv_raw", name2+"_new.root") # Creare un nuovo file ROOT con un nuovo TTree
 
 end_time = time.time()
 elapsed_time = end_time - start_time
