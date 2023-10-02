@@ -19,7 +19,7 @@ To analyze a file:
 source prepare_run.sh [file_name] [events_per_file]
 ```
 * [file_name] = name of the file without .root
-* [events_per_file] = number ov events per subfile
+* [events_per_file] = number of events per subfile
 
 This crate a directory named [file_name] with the following items:
 * `input` a directory containing the subfiles into which the initial file was divided (each consisting of [events_per_file] events)
