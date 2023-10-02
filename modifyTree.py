@@ -257,7 +257,8 @@ vector<vector<short>> new_raw_q(unsigned long long evt, vector<vector<short>> ra
                 Double_t chiSquare = chisqr;
                 int Ndof_ToT = ndf;
             
-                if(chiSquare/(Ndof_ToT)<6 && Ndof_ToT>1 && fp[0]<5.5 && fp[3]<5.5){
+                //if(chiSquare/(Ndof_ToT)<6 && Ndof_ToT>1 && fp[0]<5 && fp[3]<5){
+		if(Ndof_ToT>1 && fp[0]<3.5 && fp[3]<3.5 && fp[1]>2.5 && fp[1]<9.5){
                         //cout<<"Larhezza landau: "<<fp[0]<<" MPV: "<<fp[1]<<"--"<<" Larhezza gauss: "<<fp[3]<<endl;
                         //c->cd();
                         //q_per_strip->Draw();
@@ -456,9 +457,9 @@ df = df.Redefine("mmReadout","conv_char(mmReadout,mmStrip)")
 df = df.Redefine("max_q","conv_short(max_q,mmStrip)")
 df = df.Redefine("mmStrip","conv_int(mmStrip,mmStrip)")
 
-df = df.Redefine("raw_q", "histo_var(evt, raw_q, mmChamber, mmStrip, t_max_q)")
-df = df.Redefine("max_q", "new_max_q(max_q, raw_q, mmChamber, mmStrip, t_max_q)")
-df = df.Redefine("t_max_q", "new_t_max_q(max_q, raw_q, mmChamber, mmStrip, t_max_q)")
+#df = df.Redefine("raw_q", "histo_var(evt, raw_q, mmChamber, mmStrip, t_max_q)")
+#df = df.Redefine("max_q", "new_max_q(max_q, raw_q, mmChamber, mmStrip, t_max_q)")
+#df = df.Redefine("t_max_q", "new_t_max_q(max_q, raw_q, mmChamber, mmStrip, t_max_q)")
 
 df = df.Redefine("raw_q","new_raw_q(evt, raw_q, mmChamber, mmStrip, t_max_q)")
 df = df.Redefine("max_q", "new_max_q(max_q, raw_q, mmChamber, mmStrip, t_max_q)")
