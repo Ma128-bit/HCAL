@@ -212,7 +212,7 @@ vector<vector<short>> new_raw_q(unsigned long long evt, vector<vector<short>> ra
     vector<vector<short>> raw_q_temp = raw_q;
     cout<<"Event: "<<evt<<endl;
     for(Int_t i = 0; i<mmStrip.size() ; i++){
-        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1"){
+        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1" || mmChamber.at(i) == "Tracking-GEM1"){
             TString st=Form("event_%llu_strip_%d_onChamber_",evt, mmStrip.at(i));
             TH1F *q_per_strip = new TH1F(st+(TString)mmChamber.at(i), st+(TString)mmChamber.at(i), 15, 0, 15);
             double fr[2];
@@ -294,7 +294,7 @@ vector<vector<short>> histo_var(unsigned long long evt, vector<vector<short>> ra
     vector<vector<short>> raw_q_temp = raw_q;
     for(Int_t i = 0; i<mmStrip.size() ; i++){
         vector<double> histo_temp = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1"){
+        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1" || mmChamber.at(i) == "Tracking-GEM1"){
             TString st=Form("event_%llu_strip_%d_onChamber_",evt, mmStrip.at(i));
             TH1F *q_per_strip = new TH1F(st+(TString)mmChamber.at(i), st+(TString)mmChamber.at(i), 15, 0, 15);
             double meanY=0.0;
@@ -335,7 +335,7 @@ vector<vector<short>> histo_var(unsigned long long evt, vector<vector<short>> ra
 vector<short> new_max_q(vector<short> max_q, vector<vector<short>> raw_q, vector<string> mmChamber, vector<int> mmStrip, vector<int> t_max_q){
     vector<short> max_q_temp = max_q;
     for(Int_t i = 0; i<mmStrip.size() ; i++){
-        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1"){
+        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1" || mmChamber.at(i) == "Tracking-GEM1"){
             short max_charge = 0.0;
             for(Int_t j=0; j<raw_q.at(i).size() ; j++){
                 short charge= (raw_q.at(i)).at(j);
@@ -352,7 +352,7 @@ vector<short> new_max_q(vector<short> max_q, vector<vector<short>> raw_q, vector
 vector<int> new_t_max_q(vector<short> max_q, vector<vector<short>> raw_q, vector<string> mmChamber, vector<int> mmStrip, vector<int> t_max_q){
     vector<int> t_max_q_temp = t_max_q;
     for(Int_t i = 0; i<mmStrip.size() ; i++){
-        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1"){
+        if(mmChamber.at(i) == "Tmm-Lecce2" || mmChamber.at(i) == "Tmm-Lecce1" || mmChamber.at(i) == "Tracking-GEM1"){
             Int_t j=0;
             short max_charge = 0.0;
             int temp_max = 0.0;
