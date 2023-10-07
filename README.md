@@ -6,6 +6,7 @@ This repository contains the files necessary to perform the fit on the signals o
 * `cmsenv` must be removed from hadd_run.sh, prepare_run.sh, setup.sh and templates/launch_analysis.sh
 * `source /cvmfs/cms.cern.ch/cmsset_default.sh` must be removed from templates/launch_analysis.sh
 * Probably other changes are needed based on where the code is running.
+
 These instructions assume the use of CMSSW:
 ```
 cmsrel CMSSW_13_2_4
